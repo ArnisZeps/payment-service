@@ -21,7 +21,7 @@ export function createPaymentsController(service : PaymentService) {
             }
         },
         list(req: Request, res: Response) {
-            res.status(200).json({ message: "List of payments" });
+            res.status(200).json({ payments: service.list() });
         }
     }
 }
