@@ -11,6 +11,6 @@ export function createInMemoryPaymentRepository(): PaymentRepository {
             return true;
         },
         findById: (paymentId: string) => store.get(paymentId) || null,
-        findall: () => [...store.values()]
+        findAll: () => [...store.values()]
     };
 }
