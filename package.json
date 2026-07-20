@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
   "dependencies": {
     "express": "^5.2.1"
   },
