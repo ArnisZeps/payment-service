@@ -1,10 +1,13 @@
 import { Router } from "express";
+import type { createPaymentsController } from "../controllers/payments.controller";
 
-export function createPaymentRoutes(): Router {
+export function createPaymentRoutes(
+    controller: ReturnType<typeof createPaymentsController>
+): Router {
     const router = Router();
 
-    // post payment route
-    // get payments route
+    router.post("/", controller.create);
+    router.get("/", controller.list);
 
     return router;
 }
