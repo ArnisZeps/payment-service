@@ -37,6 +37,7 @@ export function createPaymentService(
 
             const stored = repository.findById(payment.paymentId);
             if (stored && sameContent(stored, payment)) {
+                console.log('Duplicate payment submission detected:', payment.paymentId);
                 return { kind: 'duplicate', payment: stored };
             }
 

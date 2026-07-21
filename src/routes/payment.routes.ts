@@ -1,5 +1,5 @@
 import { Router } from "express";
-import type { createPaymentsController } from "../controllers/payments.controller";
+import type { createPaymentsController } from "../controllers/payment.controller";
 
 export function createPaymentRoutes(
     controller: ReturnType<typeof createPaymentsController>

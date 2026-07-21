@@ -1,7 +1,7 @@
 import express, { type Express } from "express";
 import { createPaymentRoutes } from "./routes/payment.routes";
 import { errorHandler } from "./middleware/errorHandler";
-import { createPaymentsController } from "./controllers/payments.controller";
+import { createPaymentsController } from "./controllers/payment.controller";
 import { createPaymentService } from "./services/payment.service";
 import type { PaymentRepository } from "./repositories/payment.repository";
 
